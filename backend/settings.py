@@ -18,9 +18,10 @@ if not SECRET_KEY:
 
 # Ajout de .koyeb.app pour autoriser l'hébergeur
 ALLOWED_HOSTS = [
-    host.strip() 
-    for host in os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.koyeb.app').split(',') 
-    if host.strip()
+    '127.0.0.1',
+    'localhost',
+    'djangobackend-6dol.onrender.com',
+    '.onrender.com',  # Autorise tous les domaines d'hébergement Render
 ]
 
 INSTALLED_APPS = [
